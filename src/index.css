@@ -1,0 +1,84 @@
+:root {
+  font-family: system-ui, "Segoe UI", Tahoma, sans-serif;
+  color: #24352d;
+  background: #f5f7f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light;
+
+  --color-ink: #24352d;
+  --color-muted: #738078;
+  --color-brand: #287354;
+  --color-brand-dark: #174b38;
+  --color-brand-soft: #e8f2eb;
+  --color-accent: #d99a46;
+  --color-surface: #ffffff;
+  --color-page: #f5f7f2;
+  --color-border: #e1e8e1;
+  --shadow-card: 0 12px 32px rgb(34 62 46 / 8%);
+  --shadow-hover: 0 18px 38px rgb(34 62 46 / 13%);
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 8% 12%, rgb(220 235 222 / 52%), transparent 28rem),
+    var(--color-page);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgb(217 154 70 / 65%);
+  outline-offset: 3px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-ink);
+  line-height: 1.25;
+}
+
+p {
+  color: var(--color-muted);
+}
