@@ -3,6 +3,7 @@ import ServicesList from "../../services/components/ServicesList";
 import { services } from "../../../data/services";
 import BusinessRegistrationForm from "../../businesses/components/BusinessRegistrationForm";
 import type { Business, NewBusiness } from "../../../types/business";
+import BusinessRegistrationList from "../../businesses/components/BusinessRegistrationList";
 
 function HomePage() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -17,7 +18,6 @@ function HomePage() {
         }
         setBusinesses((prev) => [...prev, business]);
         console.log("تم تسجيل العمل التجاري:", newBusiness.name, newBusiness.description);
-        console.log("قائمة الأعمال التجارية:", businesses);
     }
     return (
         <section className="home-page">
@@ -48,6 +48,7 @@ function HomePage() {
 
                 <ServicesList matchingServices={matchingServices} />
             <BusinessRegistrationForm onRegister={handleRegister} />
+            <BusinessRegistrationList businesses={businesses} />
             </div>
         </section>
     )
