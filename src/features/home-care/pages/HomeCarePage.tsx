@@ -7,7 +7,7 @@ function submitCareRequest(_previousMessage: string, formData: FormData) {
   const careType = String(formData.get("careType") ?? "").trim();
   const preferredTime = String(formData.get("preferredTime") ?? "").trim();
 
-  if (!name || !phone || !area || !careType || !preferredTime) {
+  if (!name || !phone || !area || !careType) {
     return "أكمل الحقول المطلوبة أولًا.";
   }
 
@@ -145,9 +145,16 @@ function HomeCarePage() {
                 <option>أخرى · تحتاج مراجعة</option>
               </select>
             </label>
-            <label>
-              الموعد المفضل (اختياري)
-              <input name="preferredTime" placeholder="مثل: صباحًا" />
+            <label className="home-care-field home-care-field--optional">
+              <span className="home-care-field__label">
+                الموعد المفضل
+                <span className="home-care-field__optional">اختياري</span>
+              </span>
+              <span className="home-care-field__hint">اكتب الوقت الأنسب للتواصل أو الزيارة.</span>
+              <span className="home-care-field__input-wrap">
+                <span className="home-care-field__input-icon" aria-hidden="true">◷</span>
+                <input name="preferredTime" placeholder="مثال: صباحًا أو بعد العصر" />
+              </span>
             </label>
             <button className="home-care-button" type="submit" disabled={carePending}>
               {carePending ? "جارٍ التجربة..." : "تجربة إرسال الطلب"}
