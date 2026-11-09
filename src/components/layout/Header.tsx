@@ -29,6 +29,9 @@ function Header({ title }: HeaderProps) {
                     <NavLink to="/nursing-care" className={({ isActive }) => `site-nav__link${isActive ? " active" : ""}`}>
                         الرعاية المنزلية
                     </NavLink>
+                    <NavLink to="/api-practice" className={({ isActive }) => `site-nav__link${isActive ? " active" : ""}`}>
+                        منشورات
+                    </NavLink>
                 </nav>
             </div>
         </header>

@@ -19,6 +19,7 @@ function HomePage() {
         setBusinesses((prev) => [...prev, business]);
         console.log("تم تسجيل العمل التجاري:", newBusiness.name, newBusiness.description);
     }
+
     return (
         <section className="home-page">
             <header className="home-hero">

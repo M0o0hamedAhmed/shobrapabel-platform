@@ -6,6 +6,7 @@ import AboutPage from './features/about/pages/AboutPage';
 import ServiceDetails from './features/services/pages/ServiceDetails';
 import ShoppingList from './features/shopping/pages/ShoppingList';
 import HomeCarePage from './features/home-care/pages/HomeCarePage';
+import PostsList from './features/Posts/pages/PostsList';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
        )} />
        <Route path="/shopping-list" element={<ShoppingList />} />
        <Route path="/nursing-care" element={<HomeCarePage />} />
+       <Route path="/api-practice" element={<PostsList />} />
      </Routes>
     </MainLayout>
   );
